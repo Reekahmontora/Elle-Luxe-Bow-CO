@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elle Luxe Bow Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Elle Luxe Bow Company — Luxury hair bows for little queens. Boutique-quality bows in blush, gold, and soft feminine tones." />
+  <style>
+    :root {
+      --blush: #f7dde2;
+      --gold: #d9b88f;
+      --rose: #c27a9b;
+      --cream: #fff8f2;
+      --dark: #3b2a35;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #f0e2d5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: "Great Vibes", cursive;
+      font-size: 32px;
+      color: var(--rose);
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 80px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--blush), var(--cream));
+    }
+
+    .hero-text {
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--rose);
+      color: white;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--gold);
+      color: var(--dark);
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-image {
+      max-width: 380px;
+      margin: 20px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      background: white;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b89aa8;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    section .subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #8c6f7f;
+      margin-bottom: 40px;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .about-card {
+      flex: 1 1 260px;
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .about-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--rose);
+    }
+
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .product-card {
+      flex: 1 1 220px;
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #7a5c6b;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .testimonial-card {
+      flex: 1 1 260px;
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      font-size: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .testimonial-card span {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #8c6f7f;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .email-link {
+      color: var(--rose);
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 12px;
+      color: #8c6f7f;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero {
+        padding: 50px 20px;
+      }
+      section {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Elle Luxe Bow Company</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Luxury Hair Bows for Little Queens</h1>
+      <p>
+        Soft blush tones, satin ribbons, and boutique‑style bows designed to make every outfit feel magical.
+        Curated with love for moms who adore girly, elegant details.
+      </p>
+      <div class="hero-buttons">
+        <a href="#collections" class="btn-primary">Shop Collections</a>
+        <a href="#about" class="btn-secondary">About the Brand</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      Add a hero photo of your bows here.<br />
+      (Flat‑lay on blush fabric, pearls, and soft light for a luxury feel.)
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Elle Luxe Bow Company</h2>
+    <p class="subtitle">A girly, boutique brand created for moms who love soft, feminine details.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Our Aesthetic</h3>
+        <p>
+          Blush pink, champagne gold, and soft cream tones define our collections. Every bow is curated to feel
+          elegant, girly, and timeless.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>Quality First</h3>
+        <p>
+          We focus on premium materials—satin, chiffon, and boutique‑style bows with secure clips—so your little
+          one can wear them again and again.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>Made for Moments</h3>
+        <p>
+          From birthdays and holidays to everyday school outfits, our bows are designed to be the finishing touch
+          that makes every moment feel special.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="collections">
+    <h2>Signature Collections</h2>
+    <p class="subtitle">Curated sets to make shopping easy and aesthetic.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <h3>Blush & Gold Collection</h3>
+        <p>Soft blush bows with champagne gold accents—perfect for photoshoots and parties.</p>
+        <div class="price">$24 · Set of 3</div>
+        <p>Add your product link or “Shop on Etsy” button.</p>
+      </div>
+      <div class="product-card">
+        <h3>Princess Essentials</h3>
+        <p>Everyday bows in baby pink and cream for school, playdates, and dress‑up.</p>
+        <div class="price">$18 · Set of 4</div>
+      </div>
+      <div class="product-card">
+        <h3>Holiday Glam</h3>
+        <p>Rich tones with subtle sparkle for holiday photos and special events.</p>
+        <div class="price">$28 · Set of 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>What Moms Are Saying</h2>
+    <p class="subtitle">Social proof that your bows are worth it.</p>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        “The quality is beautiful and the colors are even prettier in person. My daughter refuses to take them off!”
+        <span>— Jessica, Mom of 2</span>
+      </div>
+      <div class="testimonial-card">
+        “These bows feel like something from a high‑end boutique. The packaging was so cute I had to keep the box.”
+        <span>— Maria, First‑time Mom</span>
+      </div>
+      <div class="testimonial-card">
+        “Perfect for photoshoots. We used the blush set for her birthday pictures and they turned out stunning.”
+        <span>— Lauren, Photographer</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s Connect</h2>
+    <p class="subtitle">Questions, custom sets, or collabs? Reach out anytime.</p>
+    <p>Email: <a href="mailto:hello@elleluxebows.com" class="email-link">hello@elleluxebows.com</a></p>
+    <p>Instagram: <strong>@elleluxebows</strong></p>
+    <p>Add your Etsy or Shopify shop link here.</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Elle Luxe Bow Company · All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
